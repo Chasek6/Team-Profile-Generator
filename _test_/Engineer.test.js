@@ -3,11 +3,15 @@ test("Engineer constructor", () => {
   const engineer = new Engineer(
     "Nicki",
     39,
-    "nickipetty@gmail.com",
-    "Npetty123"
+    "nickipetty@gmail.com", 123
   );
   expect(engineer.github).toEqual(expect.any(String));
 });
+
+
+
+
+
 // next test is from engineer.test.js
 // not understanding the above test  ***************************
 
