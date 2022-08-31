@@ -8,23 +8,11 @@ const Intern = require('./lib/Intern.js');
 const Manager = require('./lib/Manager.js');
 const generateHTML = require('./src/generateHTML.js');
 const Manager = require("./lib/Manager.js");
-const Manager = require("./lib/Manager.js");
+const { writeFile, copyFile } = require('./utils/generate-site');
 
 
 // The function tht will generate the generate HTML page using the file system
-const writeFile = data => {
-    fs.writerFile('./dist/index.html', data, err => {
-        // if a error occurs
-    if (err){
-        console.log(err);
-        return;
-        // when the profile file has been created
-    } else { 
-        console.log("Mission Complete! peep dist/index.html!")
-}
 
-    })
-};
 
 // THE ARRAYS Containing OBJECTS ASSIGNED BY USER-INPUT
 
@@ -32,8 +20,7 @@ const team = [];
 
 // prompt
 const addManager = () => {
-    return inquirer 
-    .prompt([
+    return inquirer.prompt ([
     {
 
         type: "input",
@@ -60,7 +47,7 @@ const addManager = () => {
 
     ])
 
-    .then(function(answers){
+    .then((answers) ={
 
         const Manager = new Manager(answer.name, answer.OfficeNumber, answer.ID, answer.email);
         // add it to the team array
@@ -81,5 +68,27 @@ const addManager = () => {
 
         }, {
             type: "input",
+            message: "What's the name of the Employee?",
+            name: "employeeName",
              
         }
+
+    addManager()
+
+  .then(addEmployee)
+  .then(data => {
+    return generateHTML(data);
+  })
+  .then(HTML => {
+    return writeFile(HTML);
+  })
+  .then(writeFileResponse => {
+    console.log(writeFileResponse);
+    return copyFile();
+  })
+  .then(copyFileResponse => {
+    console.log(copyFileResponse);
+  })
+  .catch(err => {
+    console.log(err);
+  }
