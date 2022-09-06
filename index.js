@@ -7,7 +7,6 @@ const Engineer = require('./lib/Engineer.js');
 const Intern = require('./lib/Intern.js');
 const Manager = require('./lib/Manager.js');
 const generateHTML = require('./src/generateHTML.js');
-const Manager = require("./lib/Manager.js");
 const { writeFile, copyFile } = require('./utils/generate-site');
 
 
@@ -47,11 +46,11 @@ const addManager = () => {
 
     ])
 
-    .then((answers) ={
+    .then((answers) =>{
 
-        const Manager = new Manager(answer.name, answer.OfficeNumber, answer.ID, answer.email);
+        const manager = new Manager(answers.name, answers.OfficeNumber, answers.ID, answers.email);
         // add it to the team array
-        team.push(Manager);
+        team.push(manager);
     })
 
     };

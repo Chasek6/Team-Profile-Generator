@@ -1,10 +1,11 @@
 const Employee = require("../lib/Employee");
 test("Employee constructor", () => {
-  const Employee = new Employee("John", 37, "johnsnow@gmail.com");
+  const employee = new Employee("John", 37, "johnsnow@gmail.com");
 
-  expect(Employee.name).toEqual(expect.any(String));
-  expect(Employee.id).toEqual(expect.any)(Number);
-  expect(Employee.email).toEqual(expect.any);
+  expect(employee.name).toEqual(expect.any(String));
+  expect(employee.id).toEqual(expect.any(Number));
+  expect(employee.email).toEqual(expect.any(String));
+
 });
 
 test("Get name from constructor file", () => {
@@ -20,7 +21,7 @@ test("Get id from constructor file", () => {
 test("Get email from constructor file", () => {
   const employee = new Employee("John", 37, "johnsnow@gmail.com");
   expect(employee.getEmail()).toEqual(
-    expect.stringContaining(employee.email.String)
+    expect(employee.email).toEqual(expect.any(String))
   );
 });
 
