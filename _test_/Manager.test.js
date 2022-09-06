@@ -8,7 +8,7 @@ test("Manager constructor", () => {
 // not understanding the above test  ***************************
 
 test("Get officeNumber from constructor file", () => {
-  const phoneNumber = 123
+  const phoneNumber = 123;
   const manager = new Manager("Max", 27, "Maxpro@gmail.com", phoneNumber);
   expect(manager.getOfficeNumber()).toBe(phoneNumber);
 });

@@ -5,7 +5,6 @@ test("Employee constructor", () => {
   expect(employee.name).toEqual(expect.any(String));
   expect(employee.id).toEqual(expect.any(Number));
   expect(employee.email).toEqual(expect.any(String));
-
 });
 
 test("Get name from constructor file", () => {
@@ -22,7 +21,6 @@ test("Get email from constructor file", () => {
   const employee = new Employee("John", 37, "johnsnow@gmail.com");
   expect(employee.getEmail()).toEqual(employee.email);
 });
-
 
 test("Get role from constructor file", () => {
   const employee = new Employee("John", 37, "johnsnow@gmail.coom");
