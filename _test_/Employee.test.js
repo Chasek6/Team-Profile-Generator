@@ -20,10 +20,9 @@ test("Get id from constructor file", () => {
 
 test("Get email from constructor file", () => {
   const employee = new Employee("John", 37, "johnsnow@gmail.com");
-  expect(employee.getEmail()).toEqual(
-    expect(employee.email).toEqual(expect.any(String))
-  );
+  expect(employee.getEmail()).toEqual(employee.email);
 });
+
 
 test("Get role from constructor file", () => {
   const employee = new Employee("John", 37, "johnsnow@gmail.coom");
