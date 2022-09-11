@@ -2,7 +2,7 @@
 # Team Profile Generator
 [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/Chasek6/team-profile-generator)
 ## Description
-This project is ran with node.js. Using inquire , two different types of prompts are fired with different paths depending on userinput. Using a generic employee constructor and 3 subclasses the users input is ultimately translated into an HTML friendly series of template literals that iterate through an array of employees the user has created to dynamically generate cards for each employee.  URL to video https://drive.google.com/file/d/1NbVEF-ORstLmJ3wQlnGaJ6YCL6saZSJA/view
+This project is ran with node.js. Using inquire , two different types of prompts are fired with different paths depending on user-input. Using a generic employee constructor and 3 subclasses the users input is ultimately translated into an HTML friendly series of template literals that iterate through an array of employees the user has created to dynamically generate cards for each employee.  URL to video https://youtu.be/xhAWiOyNg6w
 ## Table of Contents 
 - [Team Profile Generator](#team-profile-generator)
   - [Description](#description)
@@ -19,6 +19,7 @@ To install necessary dependencies, run the following command:
 However you like
 ```
 ## Usage
+https://youtu.be/xhAWiOyNg6w
 
 ## License
 This project is licensed under the MIT license.
@@ -27,8 +28,8 @@ This project is licensed under the MIT license.
 Chase S
 ## Tests
 To run tests, run the following command:
-```
-npm test
-```
+npm run test
+
+
 ## Questions
 If you have any questions about the repo, open an issue or contact [Chasek6](undefined) directly at quranstratton@gmail.com.

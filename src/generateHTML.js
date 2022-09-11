@@ -31,7 +31,6 @@ const generateHTML = (team) => {
             </ul>
             </div>
         </div>`;
-        
   };
 
   // card for the third employee which is a intern.
@@ -52,18 +51,24 @@ const generateHTML = (team) => {
   const employeeCard = [];
   // loop through the employees array and push the cards into the employeeCard array
   employeeCard.push(
-    team.filter((employee) => employee.getRole() === "Manager").map((manager) => managerCard(manager))
+    team
+      .filter((employee) => employee.getRole() === "Manager")
+      .map((manager) => managerCard(manager))
   );
   employeeCard.push(
-    team.filter((employee) => employee.getRole() === "Engineer").map((engineer) => engineerCard(engineer))
+    team
+      .filter((employee) => employee.getRole() === "Engineer")
+      .map((engineer) => engineerCard(engineer))
   );
   employeeCard.push(
-    team.filter((employee) => employee.getRole() === "Intern").map((intern) => internCard(intern))
+    team
+      .filter((employee) => employee.getRole() === "Intern")
+      .map((intern) => internCard(intern))
   );
 
   // return the employeeCard array
   return employeeCard.join("");
-}
+};
 //   for (let i = 0; i < team.length; i++) {
 //     const employee = team[i];
 //     const role = employee.getRole();
@@ -78,9 +83,9 @@ const generateHTML = (team) => {
 //     console.log(employeeCard);
 //     return employeeCard.join("");
 //   }
-  module.exports = (team) => {
-    // create the bones for the HTML page
-    return `<!DOCTYPE html>
+module.exports = (team) => {
+  // create the bones for the HTML page
+  return `<!DOCTYPE html>
         <html lang="en">
         <head>
             <meta charset="UTF-8">
@@ -105,5 +110,4 @@ const generateHTML = (team) => {
         <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
         </body>
         </html>`;
-  };
-
+};
