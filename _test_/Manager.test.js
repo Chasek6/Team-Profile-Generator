@@ -6,6 +6,11 @@ test("Manager constructor", () => {
 });
 // next test is from manager.test.js
 // not understanding the above test  ***************************
+test('getRole() should return "Manager"', () => {
+  const testValue = "Manager";
+  const e = new Manager("Foo", 1, "test@test.com", "nicki123");
+  expect(e.getRole()).toBe(testValue);
+});
 
 test("Get officeNumber from constructor file", () => {
   const phoneNumber = 123;

@@ -12,4 +12,4 @@ const writeFile = fileContents => {
         }
     })
 }
-c
+module.exports = writeFile;
